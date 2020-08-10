@@ -113,7 +113,7 @@ const castDisplay = ({ cast } ) => {
 
         if(cast[i].profile_path == null) {
             console.log('no image found')
-            // castResults.querySelectorAll('img')[i].src = `#`;
+            castResults.querySelectorAll('img')[i].src = '/IMG/missing-face.png';
         } else {
             actorImage = cast[i].profile_path;
             castResults.querySelectorAll('img')[i].src = `https://image.tmdb.org/t/p/w500/${actorImage}`;
