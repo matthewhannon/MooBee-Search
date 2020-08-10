@@ -2,9 +2,9 @@
   "name": "moobee",
   "version": "1.0.0",
   "description": "",
-  "main": "server/SRC/app.js",
+  "main": "index.js",
   "scripts": {
-    "start":"node src/app.js"
+    "start":"node server/SRC/app.js"
   },
   "author": "",
   "license": "ISC",
