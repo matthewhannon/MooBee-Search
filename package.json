@@ -1,0 +1,18 @@
+{
+  "name": "moobee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/SRC/app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
+    "postman-request": "^2.88.1-postman.24"
+  }
+}

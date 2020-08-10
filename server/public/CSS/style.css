@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: white;
+}
+
+body {
+    min-height: 100vh;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header {
+    min-height: 20%;
+    flex: 4;
+    padding-top: 4%;
+    background-color: seashell;
+    
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    /* flex: 1; */
+    font-family: 'Pacifico', cursive;
+    font-size: 7rem;
+    color: #1ebdd2;
+    transition: all .2s;
+
+    animation: fade-in-left 2s;
+}
+
+.header-sub-title {
+    /* flex: 1; */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5rem;
+    color: grey;
+    padding-bottom: 8%;
+
+    animation: fade-in 3s .3s;
+    animation-fill-mode: backwards;
+}
+
+.search-error {
+    /* flex: 1; */
+    color: #E5B865;
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+    visibility: hidden;
+    padding: 2%;
+}
+
+.form-container {
+    /* flex: 1; */
+    width: 90%;
+    height: 100%;
+    /* padding: 4%; */
+}
+
+.form-container .search {
+    text-align: center;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    animation: fade-in-bottom 2s .5s;
+    animation-fill-mode: backwards;
+}
+
+.form-container .search input {
+    flex: 1;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2%;
+    padding: 2%;
+
+    background-color: rgb(224, 247, 252);
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid grey;
+}
+
+.form-container .search button {
+    flex: 1;
+    font-size: 2rem;
+    padding: 2%;
+    background-color: rgb(116, 121, 122);
+    color: white;
+	border: none;
+	cursor: pointer;
+    outline: inherit;
+}
+
+main {
+    height: auto;
+    flex:0;
+    flex-direction: column;
+    display: none;
+    opacity: 0;
+    transition: opacity .5s;
+
+    /* background-color: rgb(224, 247, 252); */
+}
+
+.results-container {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    animation: fade-in 1s;
+}
+
+.results-header {
+    background-color: rgb(240, 251, 253);
+    flex: 1;
+    width: 100%;
+    padding: 2%;
+}
+.movie-title {
+    color: #574017;
+    font-size: 4.5rem;
+    margin: 1%;
+}
+.tagline {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.details-container {
+    flex: 1;
+    width: 100%;
+    padding: 2%;
+    
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.movie-details {
+    padding: 2%;
+}
+
+ul {
+    list-style-type: none;
+}
+li {
+    padding: 2%;
+}
+li > p {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: normal;
+    color: #574017;
+}
+li > p > span {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #1C1924;
+}
+
+.poster-details {
+    padding: 2%;
+
+}
+.poster {
+    border-radius: 5px;
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.cast-container {
+    width: 100%;
+    padding: 2%;
+    flex: 1;
+}
+.cast-container h2 {
+    font-size: 2.5rem;
+    padding: 4%;
+}
+.cast {
+    padding: 2%;
+}
+
+.actor {
+    padding: 2%;
+}
+
+.actor-img {
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.actor-name {
+    font-size: 2.5rem;
+    padding: 2%;
+    font-size: 2rem;
+}
+
+footer {
+    background-color: seashell;
+    color: white;
+    flex: 1;
+    max-height: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer .back-to-top {
+    /* background-color: rgb(241, 217, 172); */
+    width: 100%;
+    padding: 4%;
+    font-size: 2rem;
+    flex: 1;
+}
+.back-to-top:hover {
+    color: white;
+}
+footer .back-to-top p {
+    background-color: #E5B865;
+    display: none;
+    padding: 2%;
+    margin: 0 30%;
+    border-radius: 5px;
+}
+footer .made-by {
+    color: black;
+    width: 100%;
+    padding: 2%;
+    flex: 1;
+}
+
+.display-results {
+    display: flex;
+    flex: 5;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.shrink {
+    flex: 2;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fade-in-left {
+    from {
+        opacity: 0%;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0%;
+        transform: translateX(10px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fade-in-bottom {
+    from {
+        opacity: 0%;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+@media screen and (min-width: 590px) {
+    body {
+      /* background-color: salmon; */
+    }
+
+    .form-container {
+        max-width: 450px;
+    }
+
+    .results-header {
+        padding: 0;
+    }
+
+    .movie-title {
+        margin: 0;
+    }
+
+    .tagline {
+        padding: 0;
+    }
+
+    .details-container {
+        padding: 0;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .details-container .movie-details {
+        flex: 1;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .details-container .poster-details {
+        flex: 1;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cast-container {
+        /* margin: auto; */
+        width: 70%;
+        padding: 0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .cast {
+        padding: 0;
+    }
+    .actor {
+        padding: 0;
+    }
+    .actor-img {
+        max-width: 200px;
+        padding: 2%;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    html {
+        font-size: 70%;
+    }
+
+    .movie-title {
+        font-size: 6rem;
+    }
+
+
+    .cast-container {
+        max-width: 790px;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    body {
+        max-width: 1355px;
+        margin: auto;
+    }
+}
+
