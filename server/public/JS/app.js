@@ -30,8 +30,8 @@ searchForm.addEventListener('submit', (e) => {
                     displayDetails(details, credits);
                 }
             }).catch((err) => {
-                console.log(err)
-                noResults();
+                // console.log(err)
+                showError();
             })
         })
     }

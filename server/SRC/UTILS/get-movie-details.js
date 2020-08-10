@@ -8,7 +8,6 @@ const getDetails = (ID, callback) => {
         if(error){
             callback('Unable to connect!', undefined)
         } else {
-            console.log(body.tagline)
             callback(undefined, {
                 backDrop: body.backdrop_path,
                 posterPath: body.poster_path,
