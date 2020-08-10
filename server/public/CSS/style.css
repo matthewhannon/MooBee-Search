@@ -216,7 +216,6 @@ li > p > span {
 }
 
 footer {
-    background-color: seashell;
     color: white;
     flex: 1;
     max-height: 10rem;
@@ -227,8 +226,8 @@ footer {
     text-align: center;
 }
 
-footer .back-to-top {
-    /* background-color: rgb(241, 217, 172); */
+.back-to-top {
+    background-color: seashell;
     width: 100%;
     padding: 4%;
     font-size: 2rem;
@@ -245,6 +244,7 @@ footer .back-to-top p {
     border-radius: 5px;
 }
 footer .made-by {
+    background-color: seashell;
     color: black;
     width: 100%;
     padding: 2%;
@@ -374,6 +374,10 @@ footer .made-by {
     .actor-img {
         max-width: 200px;
         padding: 2%;
+    }
+
+    footer .back-to-top {
+
     }
 }
 
