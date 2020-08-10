@@ -4,7 +4,7 @@ const path = require('path');
 const hbs = require('hbs')
 const sortData = require('./UTILS/sortData')
 
-const port = 3001
+const port = process.env.PORT || 3000
 const app = express()
 
 
