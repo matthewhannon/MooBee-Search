@@ -104,6 +104,7 @@ header {
 	border: none;
 	cursor: pointer;
     outline: inherit;
+
 }
 
 main {
@@ -189,6 +190,7 @@ li > p > span {
 .cast-container {
     width: 100%;
     padding: 2%;
+    margin: 4%;
     flex: 1;
 }
 .cast-container h2 {
@@ -197,6 +199,7 @@ li > p > span {
 }
 .cast {
     padding: 2%;
+    /* box-shadow: 2px 10px 20px #888888; */
 }
 
 .actor {
@@ -206,11 +209,11 @@ li > p > span {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
 }
 
 .actor-img {
     flex: 10;
-    border-radius: 10px;
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;
